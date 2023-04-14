@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Loan eligibility prediction</title>
+</head>
+<body background="predict.png" style="background-repeat:no-repeat; background-size:100% 100%" text='black'>
+<h1>
+<b>
+<i>
+<font size=15>
+<center>Loan Eligibility Prediction</center>
+</font>
+</i>
+</b>
+</h1>
+<div style="background-color:white">
+<hr>
+<hr></div>
+<h2> Enter the details to check whether Loan is eligible ot not!</h2>
+<h4> 
+<form action="{{url_for('predict')}}" method="post">
+<center>
+<table>
+<tr>
+<td>Loan ID<td>:&nbsp&nbsp&nbsp<input type='text' name='Loan ID' placeholder='Enter Loan ID' Enter Numerical part required='required'/><br>
+</tr>
+<tr>
+<td>Gender<td>:&nbsp&nbsp&nbsp<input type='text' name='Gender' placeholder='Enter Gender' Enter 0 for Male 1 for Female required='required' /><br>
+</tr>
+<tr>
+<td>Marital Status<td>:&nbsp&nbsp&nbsp<input type='text' name='Married' placeholder='Enter 0 for no 1 for yes' required='required'/><br>
+</tr>
+<tr>
+<td>Dependents<td>:&nbsp&nbsp&nbsp<input type='text' name='Dependents' placeholder='mcg/L' required='required' /><br>
+</tr>
+<tr>
+<td>Education<td>:&nbsp&nbsp&nbsp<input type='text' name='Education' placeholder='Enter 0 for no 1 for yes' required='required' /><br>
+</tr>
+<tr>
+<td>Self_Employed<td>:&nbsp&nbsp&nbsp<input type='text' name='Self_Employed ' placeholder='Self_Employed ' required='required' /><br>
+</tr>
+<tr>
+<td>ApplicantIncome<td>:&nbsp&nbsp&nbsp<input type='text' name='ApplicantIncome' placeholder='ApplicantIncome' required='required' /><br>
+</tr>
+<tr>
+<td>CoapplicantIncome<td>:&nbsp&nbsp&nbsp<input type='text' name='CoapplicantIncome' placeholder='CoapplicantIncome' required='required'/><br>
+</tr>
+<tr>
+<td>LoanAmount<td>:&nbsp&nbsp&nbsp<input type='text' name='LoanAmount' placeholder='LoanAmount' required='required' /><br>
+</tr>
+<tr>
+<td>Loan_Amount_Term<td>:&nbsp&nbsp&nbsp<input type='text' name='Loan_Amount_Term' placeholder='  ' required='required' /><br>
+</tr>
+<tr>
+<td>Credit_History<td>:&nbsp&nbsp&nbsp<input type='text' name='Credit_History' placeholder='  ' required='required' /><br>
+</tr>
+<tr>
+<td>Property_Area<td>:&nbsp&nbsp&nbsp<input type='text' name='Property_Area' placeholder='  ' required='required' /><br>
+</tr>
+<tr>
+<td><br><br><center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-primary btn-block btn-large">Predict</center></button>
+</tr>
+</form>
+</h4>
+</table>
+</center>
+<h2>
+<b>
+{{ prediction_text }}
+</b>
+</h2>
+</body>
+</html>
